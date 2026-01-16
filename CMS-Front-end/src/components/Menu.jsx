@@ -74,12 +74,12 @@ const menuItems = [
                 href: "/list/events",
                 visible: ["admin", "teacher", "student", "parent"],
             },
-            {
-                icon: "/message.png",
-                label: "Messages",
-                href: "/list/messages",
-                visible: ["admin", "teacher", "student", "parent"],
-            },
+            // {
+            //     icon: "/message.png",
+            //     label: "Messages",
+            //     href: "/list/messages",
+            //     visible: ["admin", "teacher", "student", "parent"],
+            // },
             {
                 icon: "/announcement.png",
                 label: "Announcements",
@@ -122,10 +122,10 @@ export function Menu() {
             {menuItems.map((i) => {
                 return (
                     <div key={i.title} className="text-xs">
-                        <span className="text-gray-400 pl-2 md:pl-5 ">{i.title}</span>
+                        <span className="flex text-gray-400  md:pl-5 w-full md:justify-start justify-center">{i.title}</span>
                         {i.items.map((item) => {
                             return (
-                                <Link key={item.label} to={item.href} className="flex items-center justify-center lg:justify-start gap-2 p-1 ml-2 m-3 hover:bg-gray-200 rounded-md">
+                                <Link key={item.label} to={item.href} className="flex items-center justify-center lg:justify-start gap-2 p-1  lg:ml-8  ml-2 m-3 hover:bg-gray-200 rounded-md">
                                     <img src={item.icon} alt={item.label} width={16} height={16} />
                                     <span className="hidden lg:block">{item.label}</span>
                                 </Link>

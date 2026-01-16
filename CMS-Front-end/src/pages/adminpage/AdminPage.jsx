@@ -4,7 +4,7 @@ import { Layout } from "../Layout";
 export function AdminPage() {
     return(
         <Layout>
-            <div>Admin Page</div>
+            <div className="bg-blue-200 h-screen overflow-hidden">Admin Page</div>
         </Layout>
     );
 }
