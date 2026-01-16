@@ -1,10 +1,13 @@
+import { AdminPage } from './pages/adminpage/AdminPage.jsx';
+import { Route,Routes } from 'react-router-dom';
 import './App.css'
 
 function App() {
   return (
-    <div className="text-red-500 text-2xl min-h-screen flex items-center justify-center">
-      Tailwind is working
-    </div>
+    <Routes>
+      <Route path="/admin" element={<AdminPage />} />
+
+    </Routes>
   )
 }
 
