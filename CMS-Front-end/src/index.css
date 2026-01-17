@@ -17,3 +17,19 @@
 html, body {
     overflow: auto;
 }
+
+:root[data-theme="light"] {
+  --text: #030b17;
+  --background: #edf3fd;
+  --primary: #0f3e85;
+  --secondary: #8768ee;
+  --accent: #5118d8;
+}
+:root[data-theme="dark"] {
+  --text: #e6effc;
+  --background: #020812;
+  --primary: #7baaf0;
+  --secondary: #301199;
+  --accent: #6227e7;
+}
+

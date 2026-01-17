@@ -1,9 +1,9 @@
 import { Layout } from "../Layout";
 
-export function StudentPage() {
+export function TeacherPage() {
     return(
         <Layout>
-            <div>Student</div>
+            <div>Teacher</div>
         </Layout>
     );
 }

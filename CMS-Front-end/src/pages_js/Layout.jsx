@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
-import { Menu } from "../components/Menu";
+import { Menu } from "../Components/Menu";
+import { Navbar } from "../Components/Navbar";
 
 export function Layout({ children }) {
     return(
