@@ -1,4 +1,5 @@
 import { UserCard } from "../../components/UserCard";
+import { CountChart } from "../../components/CountChart";
 import { Layout } from "../Layout";
 
 
@@ -7,7 +8,7 @@ export function AdminPage() {
         <Layout>
             <div className=" flex flex-col md:flex-row gap-4 p-4 ">
                 {/* LEFT SIDE */}
-                <div className="w-full lg:w-2/3">
+                <div className="w-full lg:w-2/3 flex flex-col gap-4">
                     {/* CARDS */}
                     <div className="flex gap-4 justify-between flex-wrap">
                         <UserCard type="student"/>
@@ -15,6 +16,19 @@ export function AdminPage() {
                         <UserCard type="parent"/>
                         <UserCard type="staff"/>
                     </div>
+                    {/*  MIDDLE CHARTS */}
+                    <div className="flex gap-4 flex-col lg:flex-row">
+                        {/* COUNT CHART  */}
+                        <div className="w-full lg:w-1/3 h-[350px]">
+                            <CountChart />
+                        </div>
+                        {/* ATTENDANCE CHART  */}
+                        <div className="w-full lg:w-2/3 h-[350px]">
+                            
+                        </div>
+                    </div>
+                    {/* BOTTOM CHART  */}
+                    <div className="w-full h-[500px]"></div>
                 </div>
                 {/* RIGHT SIDE */}
                 <div className="w-full lg:w-1/3 bg-sky-300">r</div>
