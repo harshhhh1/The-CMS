@@ -125,7 +125,7 @@ export function Menu() {
                         <span className="flex text-gray-400  md:pl-5 w-full md:justify-start justify-center">{i.title}</span>
                         {i.items.map((item) => {
                             return (
-                                <Link key={item.label} to={item.href} className="flex items-center justify-center lg:justify-start gap-2 p-1  lg:ml-8  ml-2 m-3 hover:bg-gray-200 rounded-md">
+                                <Link key={item.label} to={item.href} className="flex items-center justify-center lg:justify-start gap-2 p-1  lg:pl-8  ml-2 m-3 hover:bg-gray-200 rounded-md hover:bg-blue-100">
                                     <img src={item.icon} alt={item.label} width={16} height={16} />
                                     <span className="hidden lg:block">{item.label}</span>
                                 </Link>

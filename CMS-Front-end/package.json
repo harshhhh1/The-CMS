@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "link": "^2.1.2",
     "react": "^19.2.0",
     "react-calendar": "^6.0.0",

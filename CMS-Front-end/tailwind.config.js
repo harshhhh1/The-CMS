@@ -8,5 +8,10 @@ export default {
     extend: {},
   },
   plugins: [],
+  // tailwind.config.js
+  fontFamily: {
+    sans: ['Inter', 'system-ui', 'sans-serif'],
+  }
+
 }
 
