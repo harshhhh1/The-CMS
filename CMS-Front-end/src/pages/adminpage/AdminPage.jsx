@@ -10,9 +10,9 @@ import { Layout } from "../Layout";
 export function AdminPage() {
     return(
         <Layout>
-            <div className=" flex flex-col md:flex-row gap-4 p-4 ">
+            <div className=" flex flex-col md:flex-row gap-4 p-4 h-full overflow-hidden scroll-none m-0">
                 {/* LEFT SIDE */}
-                <div className="w-full lg:w-2/3 flex flex-col gap-4">
+                <div className="w-full lg:w-2/3 flex flex-col gap-4 overflow-y-auto overscroll-contain">
                     {/* CARDS */}
                     <div className="flex gap-4 justify-between flex-wrap">
                         <UserCard type="student"/>
@@ -37,7 +37,7 @@ export function AdminPage() {
                     </div>
                 </div>
                 {/* RIGHT SIDE */}
-                <div className="w-full lg:w-1/3 flex flex-col gap-4 h-[100%]">
+                <div className="w-full lg:w-1/3 flex flex-col gap-4 h-[100%] overflow-y-auto overscroll-contain">
                     {/* EVENT CALENDER  */}
                     <EventCalender />
                     <Announcements />
