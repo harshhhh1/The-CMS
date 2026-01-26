@@ -1,5 +1,6 @@
 import React from 'react';
 import { CoinIcon, SunIcon, MoonIcon, LockIcon, DashboardIcon, XIcon, MenuIcon } from './LandingIcons';
+import { Link } from 'react-router-dom';
 
 const LandingNavbar = ({
     isDarkMode,
@@ -42,13 +43,13 @@ const LandingNavbar = ({
                     )}
                 </button>
 
-                <button className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border transition-all shadow-sm
+                <Link to={'/admin'} className={`group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border transition-all shadow-sm
               ${isDarkMode
                         ? 'bg-[#161316] border-white text-white hover:bg-white hover:text-[#161316]'
                         : 'bg-white border-slate-200 text-black hover:border-indigo-600 hover:text-indigo-600'}`}>
                     <span className={iconColor}><DashboardIcon /></span>
                     <span>Go to Dashboard</span>
-                </button>
+                </Link>
             </div>
 
             {/* Mobile Navigation */}
