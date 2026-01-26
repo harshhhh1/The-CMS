@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const LandingNavbar = ({
     isDarkMode,
-    setIsDarkMode,
     handleDarkModeToggle,
     isDarkModeUnlocked,
     coins,
