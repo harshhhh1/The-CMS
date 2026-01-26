@@ -13,7 +13,7 @@ const FeatureCard = ({ feature, isDarkMode, iconColor, specialEliteFont, onClick
                    ${isDarkMode ? 'bg-[#43256E] text-white' : 'bg-slate-100 text-black'}`}>
                     <ArrowRightIcon />
                 </div>
-                <span className={`font-bold text-xs sm:text-sm ${iconColor}`} style={specialEliteFont}>More...</span>
+                <span className={`font-bold text-xs sm:text-sm ${iconColor}`} style={specialEliteFont}>And Many More...</span>
             </a>
         )
     }

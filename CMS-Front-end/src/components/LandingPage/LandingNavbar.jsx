@@ -16,13 +16,13 @@ const LandingNavbar = ({
 }) => {
     return (
         <header className="flex-none flex items-center justify-between px-6 py-4 z-20 backdrop-blur-sm">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl shadow-lg
               ${isDarkMode ? 'bg-[#54A388] text-[#161316]' : 'bg-indigo-600 text-white'}`}>
                     L
                 </div>
                 <span className={`text-2xl font-bold tracking-tight ${iconColor}`} style={specialEliteFont}>Learnytics</span>
-            </div>
+            </Link>
 
             <div className="hidden sm:flex items-center gap-4">
                 <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border ${isDarkMode ? 'bg-[#161316]/50 border-white/30' : 'bg-white border-slate-200'}`}

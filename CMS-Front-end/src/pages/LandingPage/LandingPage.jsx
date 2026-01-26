@@ -8,6 +8,8 @@ import ContactModal from '../../components/LandingPage/ContactModal';
 import FeatureDetailModal from '../../components/LandingPage/FeatureDetailModal';
 import ToastNotification from '../../components/LandingPage/ToastNotification';
 import LandingFooter from '../../components/LandingPage/LandingFooter';
+import AmbientGlow from '../../components/LandingPage/AmbientGlow';
+import { useTheme } from '../../contexts/ThemeContext';
 
 // Special Elite font style constant
 const specialEliteFont = { fontFamily: '"Special Elite", cursive' };
@@ -15,16 +17,24 @@ const specialEliteFont = { fontFamily: '"Special Elite", cursive' };
 // Constants for economy
 const DARK_MODE_PRICE = 100;
 const DAILY_POINTS = 50;
-const INITIAL_COINS = 80;
 
 const LandingPage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isDarkModeUnlocked, setIsDarkModeUnlocked] = useState(false);
+  // Use ThemeContext for shared state
+  const {
+    isDarkMode,
+    setIsDarkMode,
+    isDarkModeUnlocked,
+    setIsDarkModeUnlocked,
+    coins,
+    setCoins,
+    dailyClaimed,
+    setDailyClaimed
+  } = useTheme();
+
+  // Local state for this page only
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [selectedFeature, setSelectedFeature] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [coins, setCoins] = useState(INITIAL_COINS);
-  const [dailyClaimed, setDailyClaimed] = useState(false);
   const [toast, setToast] = useState(null);
   const [animatingCoins, setAnimatingCoins] = useState(false);
 
@@ -117,12 +127,6 @@ const LandingPage = () => {
         {`
           @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
           
-          @keyframes backgroundGradient {
-            0% { background-position: 0% 23%; }
-            50% { background-position: 100% 78%; }
-            100% { background-position: 0% 23%; }
-          }
-          
           @keyframes floatUpDown {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
@@ -151,14 +155,11 @@ const LandingPage = () => {
       </style>
 
       <div
-        className={`relative min-h-screen lg:h-screen w-full overflow-y-auto lg:overflow-hidden font-sans transition-colors duration-500 flex flex-col ${isDarkMode ? 'text-white' : 'bg-slate-50 text-black'}`}
-        style={isDarkMode ? {
-          background: 'linear-gradient(309deg, #7158d6, #161316, #43256e, #54A388)',
-          backgroundSize: '600% 600%',
-          animation: 'backgroundGradient 30s ease infinite'
-        } : {}}
+        className={`relative min-h-screen lg:h-screen w-full overflow-y-auto lg:overflow-hidden font-sans transition-colors duration-500 flex flex-col ${isDarkMode ? 'bg-[#0a0a0a] text-white' : 'bg-slate-50 text-black'}`}
       >
         <ToastNotification message={toast} isDarkMode={isDarkMode} />
+
+        {/* <AmbientGlow isDarkMode={isDarkMode} /> */}
 
         <FloatingIconsLayer isDarkMode={isDarkMode} />
 
