@@ -20,7 +20,7 @@ const LandingNavbar = ({
               ${isDarkMode ? 'bg-[#54A388] text-[#161316]' : 'bg-indigo-600 text-white'}`}>
                     L
                 </div>
-                <span className={`text-2xl font-bold tracking-tight ${iconColor}`} style={specialEliteFont}>Learnytics</span>
+                <span className={`text-2xl font-bold tracking-tight ${iconColor}`} style={specialEliteFont}>Bbrains</span>
             </Link>
 
             <div className="hidden sm:flex items-center gap-4">

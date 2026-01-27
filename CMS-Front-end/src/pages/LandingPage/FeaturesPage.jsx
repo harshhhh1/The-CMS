@@ -191,7 +191,7 @@ const FeaturesPage = () => {
                             All Features
                         </h1>
                         <p className={`text-lg ${isDarkMode ? 'text-white/70' : 'text-slate-600'}`}>
-                            Discover all the powerful features that make Learnytics the ultimate educational platform
+                            Discover all the powerful features that make Bbrains the ultimate educational platform
                         </p>
                     </div>
 

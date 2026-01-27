@@ -12,22 +12,22 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        const saved = localStorage.getItem('learnytics-dark-mode');
+        const saved = localStorage.getItem('Bbrains-dark-mode');
         return saved ? JSON.parse(saved) : false;
     });
 
     const [isDarkModeUnlocked, setIsDarkModeUnlocked] = useState(() => {
-        const saved = localStorage.getItem('learnytics-dark-mode-unlocked');
+        const saved = localStorage.getItem('Bbrains-dark-mode-unlocked');
         return saved ? JSON.parse(saved) : false;
     });
 
     const [coins, setCoins] = useState(() => {
-        const saved = localStorage.getItem('learnytics-coins');
+        const saved = localStorage.getItem('Bbrains-coins');
         return saved ? JSON.parse(saved) : 80;
     });
 
     const [dailyClaimed, setDailyClaimed] = useState(() => {
-        const saved = localStorage.getItem('learnytics-daily-claimed');
+        const saved = localStorage.getItem('Bbrains-daily-claimed');
         const lastClaimed = saved ? JSON.parse(saved) : null;
 
         // Reset daily claim if it's a new day
@@ -44,20 +44,20 @@ export const ThemeProvider = ({ children }) => {
 
     // Persist to localStorage whenever values change
     useEffect(() => {
-        localStorage.setItem('learnytics-dark-mode', JSON.stringify(isDarkMode));
+        localStorage.setItem('Bbrains-dark-mode', JSON.stringify(isDarkMode));
     }, [isDarkMode]);
 
     useEffect(() => {
-        localStorage.setItem('learnytics-dark-mode-unlocked', JSON.stringify(isDarkModeUnlocked));
+        localStorage.setItem('Bbrains-dark-mode-unlocked', JSON.stringify(isDarkModeUnlocked));
     }, [isDarkModeUnlocked]);
 
     useEffect(() => {
-        localStorage.setItem('learnytics-coins', JSON.stringify(coins));
+        localStorage.setItem('Bbrains-coins', JSON.stringify(coins));
     }, [coins]);
 
     useEffect(() => {
         if (dailyClaimed) {
-            localStorage.setItem('learnytics-daily-claimed', JSON.stringify(new Date().toISOString()));
+            localStorage.setItem('Bbrains-daily-claimed', JSON.stringify(new Date().toISOString()));
         }
     }, [dailyClaimed]);
 
