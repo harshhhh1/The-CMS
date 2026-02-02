@@ -3,7 +3,7 @@ import { EventCalender } from "../../components/EventCalender";
 import { BigCalendar } from "../../components/BigCalendar";
 import { Layout } from "../Layout";
 
-export function StudentPage() {
+export function TeacherPage () {
     return(
         <Layout>
             <div className=" flex flex-col xl:flex-row gap-4 p-4 h-full overflow-hidden scroll-none m-0">
